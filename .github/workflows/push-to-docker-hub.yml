@@ -11,7 +11,7 @@ jobs:
         name: toby1991/fisco-bcos-browser-api
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        dockerfile: /server/Dockerfile
+        dockerfile: server/Dockerfile
         tags: "latest,2.2.5"
     - name: Publish web to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
@@ -19,5 +19,5 @@ jobs:
         name: toby1991/fisco-bcos-browser-web
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        dockerfile: /web/Dockerfile
+        dockerfile: web/Dockerfile
         tags: "latest,2.2.5"
